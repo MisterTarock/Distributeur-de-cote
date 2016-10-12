@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Distributeur_de_cotes
 {
-    class Appreciation : Evaluation
+   public class Appreciation : Evaluation
     //For the Heritage we use "Evaluation" with his constructor with base
 
     {
         //to create my variable (so in minuscule)
         private string appreciation;
 
-        //Teacher became my type with a variable teacher 
-        public int Note()
+
+        //to create my properties
+        public Appreciation(Activity activity, string appreciation) : base(activity)
+        {
+            this.appreciation = appreciation;
+        }
+
+        //Note are the properties of the variable appreciation
+        //We override to write in Note who were abstract in the class Evaluation
+        public override int Note()
         {
             switch (appreciation)
             {
@@ -28,10 +36,15 @@ namespace Distributeur_de_cotes
                     return (8);
                 case "N":
                     return (4);
-
-                
-
+                default:
+                    return (0);
             }
+        }
+
+
+        public void setAppreciation(string appreciation)
+        {
+            this.appreciation = appreciation;
         }
 
     }

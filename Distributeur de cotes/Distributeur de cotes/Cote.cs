@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Distributeur_de_cotes
 {
-    class Cote : Evaluation
+    public class Cote : Evaluation
     //For the Heritage we use "Evaluation" with his constructor with base
 
     {
         //to create my variable (so in minuscule)
         private int note;
 
-        //Teacher became my type with a variable teacher
-        // pourquoi override?
+        //To create my properties Note
+        // override in the child "Cote" redefine the method "Note()" of the mother "Evaluation"
         public override int Note()
         {
-            return (note);
+            return note;
         }
         public void setNote(int nt)
         {

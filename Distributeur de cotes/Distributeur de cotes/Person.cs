@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Distributeur_de_cotes
 {
-    class Person
+    public class Person
     {
         //to create my variable (so in minuscule)
         private string firstname, lastname;

@@ -7,13 +7,13 @@ using Distributeur_de_cotes;
 
 namespace Distributeur_de_cotes
 {
-    class Activity //reated to teacher with a composition so we replace 
+   public class Activity //reated to teacher with a composition so we replace 
                 //the type 'int, string...' by the name from the related class
     {
         //to create my variable (so in minuscule)
         private int ects;
         private string name, code;
-        //Teacher became my type with a variable teacher 
+        //Teacher became my type and is with a variable teacher 
         private Teacher teacher;
 
         //to create the properties who are constructor and use the variables 

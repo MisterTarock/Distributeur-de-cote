@@ -7,7 +7,7 @@ using Distributeur_de_cotes;
 
 namespace Distributeur_de_cotes
 {
-    class Teacher : Person
+   public class Teacher : Person
     {
         //to create my variable (so in minuscule)
         private int salary;
@@ -27,5 +27,8 @@ namespace Distributeur_de_cotes
             Salary = salary;
         }
 
+        public Teacher(string firstname, string lastname) : base(firstname, lastname)
+        {
+        }
     }
 }
