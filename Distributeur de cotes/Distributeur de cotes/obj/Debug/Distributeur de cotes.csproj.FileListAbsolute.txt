@@ -7,3 +7,6 @@ D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2\Distributeur de co
 D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe.config
 D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.exe
 D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.pdb
+D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe
+D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.pdb
+D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.csprojResolveAssemblyReference.cache
