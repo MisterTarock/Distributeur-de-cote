@@ -25,8 +25,8 @@ namespace Distributeur_de_cotes
 
              //To define the differnete activity
              Activity COO = new Activity("Conception oriente objet","COO", 3, Combe); // the same for the teacher call by is var
-             Activity EN = new Activity("Electo Numérique", "EN", 4, Fle);
-             Activity PI = new Activity("Projet Info", "PO", 10, Lur);
+             Activity EN = new Activity("Electo Numérique", "EN", 3, Fle);
+             Activity PI = new Activity("Projet Info", "PO", 3, Lur);
 
              //To define the appreciations
              Appreciation PuissantCOO = new Appreciation(COO,"X");
