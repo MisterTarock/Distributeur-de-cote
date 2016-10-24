@@ -71,8 +71,9 @@ namespace Distributeur_de_cotes
             List<Student> students = ListStudents();
             foreach (string line in grds)
             {
+                
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
-
+                
                 Evaluation grade;
 
                 // Grades can be either given as an int or a string (N, C, B, ...)
@@ -80,7 +81,10 @@ namespace Distributeur_de_cotes
                 // we assume the grade is in the string fromat
                 try
                 {
+                    
                     grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));
+                    
+                    
                 }
                 catch (FormatException)
                 {
@@ -88,8 +92,10 @@ namespace Distributeur_de_cotes
                 }
 
                 // Find the corresponding student and add the grade
-                students.Find(s => s.Lastname == elems[0])
-                        .Add(grade);
+                
+                students.Find(s => s.Lastname == elems[0]).Add(grade);
+
+                
             }
         }
     }

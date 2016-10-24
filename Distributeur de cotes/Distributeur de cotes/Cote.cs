@@ -11,21 +11,24 @@ namespace Distributeur_de_cotes
 
     {
         //to create my variable (so in minuscule)
-        private int note;
+        
+        private int cote;
 
         //To create my properties Note
         // override in the child "Cote" redefine the method "Note()" of the mother "Evaluation"
         public override int Note()
         {
-            return note;
+            return cote;
         }
         public void setNote(int nt)
         {
-            note = nt;
+            
+            cote = nt;
         }
+        
         public Cote(int cote, Activity Activity) : base(Activity)
         {
-            cote = note;
+            this.cote = cote;
         }
     }
 }

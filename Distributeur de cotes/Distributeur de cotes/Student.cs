@@ -24,6 +24,7 @@ namespace Distributeur_de_cotes
         public void Add(Evaluation eval)
         {
             this.cours.Add(eval);
+            
         }
 
         //to make the average of all the eval
@@ -42,12 +43,13 @@ namespace Distributeur_de_cotes
         public string Bulletin()
         { 
             Dictionary<Activity, Tuple<int, int>> cotesforActivity = new Dictionary<Activity, Tuple<int, int>>();
+            Console.WriteLine(this.cours);
+            foreach (Distributeur_de_cotes.Evaluation point in cours){
+                
 
-            foreach (var point in this.cours)
-            {
-               
                 try
                 {
+                    Console.WriteLine("deo");
                     Tuple<int, int> t = cotesforActivity[point.Activity];
                     cotesforActivity[point.Activity] = new Tuple<int, int>(t.Item1 + point.Note(), t.Item2 + 1);
                 }
@@ -59,10 +61,11 @@ namespace Distributeur_de_cotes
 
             
             string bulletin = this.Lastname + " " + this.Firstname + "\n";
-
+            
             
             foreach (KeyValuePair<Activity, Tuple<int, int>> entry in cotesforActivity)
             {
+                Console.WriteLine("Test");
                 bulletin += entry.Key.Code + " " + entry.Key.Name + " " + entry.Key.ECTS + " " + entry.Value.Item1 / entry.Value.Item2 + "\n";
             }
 
