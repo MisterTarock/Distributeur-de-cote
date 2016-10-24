@@ -28,7 +28,7 @@ namespace Distributeur_de_cotes
       
         //My Constructor
         //to make the variable accesible and use them via the properties
-        public Person(string firstname, string lastname)
+        public Person(string lastname, string firstname)
         {
             Firstname = firstname;
             Lastname = lastname;

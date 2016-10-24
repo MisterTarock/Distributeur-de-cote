@@ -22,12 +22,12 @@ namespace Distributeur_de_cotes
 
         //My constructor + base
         //base call the constructor from person
-        public Teacher(string firstname, string lastname, int salary) : base(firstname, lastname)
+        public Teacher(string lastname, string firstname,  int salary) : base(firstname, lastname)
         {
             Salary = salary;
         }
 
-        public Teacher(string firstname, string lastname) : base(firstname, lastname)
+        public Teacher(string lastname,string firstname) : base(firstname, lastname)
         {
         }
     }

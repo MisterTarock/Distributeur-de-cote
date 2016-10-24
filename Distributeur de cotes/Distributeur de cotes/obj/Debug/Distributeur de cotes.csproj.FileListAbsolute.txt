@@ -10,3 +10,9 @@ D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de 
 D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe
 D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.pdb
 D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2-3\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.csprojResolveAssemblyReference.cache
+C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe.config
+C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.exe
+C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.pdb
+C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe
+C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.pdb
+C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.csprojResolveAssemblyReference.cache
