@@ -20,14 +20,43 @@ namespace Distributeur_de_cotes
             foreach (Student student in students)
             {
                 File.WriteAllText("../../Bulletin-" + student.Lastname + "-" + student.Firstname + ".txt", student.Bulletin()+"/n /n");
-                Console.Write(student.Bulletin());
-                Console.WriteLine(student.Average());
-                Console.WriteLine("\n \n");
+                //Console.Write(student.Bulletin());
+                //Console.WriteLine(student.Average());
+                //Console.WriteLine("\n \n");
 
             }
+            double width= Console.WindowWidth;
+            for ( int i = 0; i < ((width/2)-14); i++)
+            {
+                Console.Write("=");
+            }
+            Console.Write("Bienvenue dans evaluator 2.0 ");
+            for (int i = 0; i < ((width / 2) - 15); i++)
+            {
+                Console.Write("=");
+            }
+            Console.WriteLine("What are you here for?");
+            Console.WriteLine("1) See Bulletin");
+            Console.WriteLine("2) Something");
+            Console.WriteLine("3) Some other thing");
+            Console.WriteLine("4) Dunno LOL");
+            string result = "";
+            switch (Convert.ToString(Console.ReadLine()))
+            {
+                case "1":
+                    result = "Available bulletins:"+ Environment.NewLine;
+                    foreach (Student student in students)
+                    {
+                        result += Convert.ToString(student.Lastname)+ Environment.NewLine;
+                    }
+                    Console.WriteLine(result);
+                    break;
 
-            Console.ReadKey(); 
-            
+
+            }
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+
         }
         public static List<Student> ListStudents()
         {
@@ -91,8 +120,16 @@ namespace Distributeur_de_cotes
                 }
 
                 // Find the corresponding student and add the grade
+                try
+                {
+                    students.Find(s => s.Lastname == elems[0]).Add(grade);
+                }
+                catch
+                {
+                    Console.Write(elems[0]);
+                    Console.WriteLine(": Student not registered");
+                }
                 
-                students.Find(s => s.Lastname == elems[0]).Add(grade);
 
                 
             }

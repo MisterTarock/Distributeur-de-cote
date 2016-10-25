@@ -1,4 +1,5 @@
 Puissant PCLB
 E3010 Programmation 5 16
 E3060 Anglais 4 8
+E3020 Electro 3 5
 /n /n
