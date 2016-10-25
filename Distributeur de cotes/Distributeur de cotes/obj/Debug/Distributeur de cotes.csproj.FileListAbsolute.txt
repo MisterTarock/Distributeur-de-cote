@@ -16,3 +16,9 @@ C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distribute
 C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe
 C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.pdb
 C:\Data\ECAM\Cours\3eme\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.csprojResolveAssemblyReference.cache
+C:\Data\Cours\BLOC 3\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe.config
+C:\Data\Cours\BLOC 3\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.exe
+C:\Data\Cours\BLOC 3\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.pdb
+C:\Data\Cours\BLOC 3\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.exe
+C:\Data\Cours\BLOC 3\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\bin\Debug\Distributeur de cotes.pdb
+C:\Data\Cours\BLOC 3\PI\Distributeur-de-cote\Distributeur de cotes\Distributeur de cotes\obj\Debug\Distributeur de cotes.csprojResolveAssemblyReference.cache

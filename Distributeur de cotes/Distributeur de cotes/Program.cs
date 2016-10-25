@@ -13,16 +13,16 @@ namespace Distributeur_de_cotes
         {
             List<Student> students = ListStudents();
             List<Teacher> teachers = ListTeachers();
+            List<Activity> activities = ListActivity(teachers);
 
-
-            List<Activity> activities = ListActivity();
-
-            readGrades();
+            readGrades(students,activities);
 
             foreach (Student student in students)
             {
-                File.WriteAllText("../../Bulletin-" + student.Lastname + "-" + student.Firstname + ".txt", student.Bulletin());
+                File.WriteAllText("../../Bulletin-" + student.Lastname + "-" + student.Firstname + ".txt", student.Bulletin()+"/n /n");
                 Console.Write(student.Bulletin());
+                Console.WriteLine(student.Average());
+                Console.WriteLine("\n \n");
 
             }
 
@@ -52,11 +52,11 @@ namespace Distributeur_de_cotes
             }
             return teachers;
         }
-        public static List<Activity> ListActivity()
+        public static List<Activity> ListActivity(List<Teacher> teachers)
         {
             string[] actis = System.IO.File.ReadAllLines("../../Activities.csv");
             List<Activity> activities = new List<Activity>();
-            List<Teacher> teachers = ListTeachers();
+            
             foreach(string line in actis)
             {
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
@@ -64,15 +64,15 @@ namespace Distributeur_de_cotes
             }
             return activities;
         }
-        public static void readGrades( )
+        public static void readGrades(List<Student> students, List<Activity> activities)
         {
             string[] grds = System.IO.File.ReadAllLines("../../Cotes.csv");
-            List<Activity> activities = ListActivity();
-            List<Student> students = ListStudents();
+            
             foreach (string line in grds)
             {
+                
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
-
+                
                 Evaluation grade;
 
                 // Grades can be either given as an int or a string (N, C, B, ...)
@@ -81,15 +81,20 @@ namespace Distributeur_de_cotes
                 try
                 {
                     grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));
+                    
+                    
                 }
                 catch (FormatException)
                 {
+                    
                     grade = new Appreciation(activities.Find(a => a.Code == elems[1]), elems[2]);
                 }
 
                 // Find the corresponding student and add the grade
-                students.Find(s => s.Lastname == elems[0])
-                        .Add(grade);
+                
+                students.Find(s => s.Lastname == elems[0]).Add(grade);
+
+                
             }
         }
     }
