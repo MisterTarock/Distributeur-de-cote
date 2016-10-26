@@ -114,11 +114,12 @@ namespace Distributeur_de_cotes
                 
                 Evaluation grade;
 
+
+                try
                 {
-                    grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));
-                    
-                    
+                    grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));   
                 }
+
                 catch (FormatException)
                 {
                     
