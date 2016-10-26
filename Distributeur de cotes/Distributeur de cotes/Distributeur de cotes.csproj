@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Activity.cs" />
     <Compile Include="Appreciation.cs" />
+    <Compile Include="Choice1.cs" />
     <Compile Include="Cote.cs" />
     <Compile Include="Evaluation.cs" />
     <Compile Include="Person.cs" />
