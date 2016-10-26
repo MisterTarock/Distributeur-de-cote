@@ -42,6 +42,7 @@ namespace Distributeur_de_cotes
                 Console.WriteLine("2) Something");
                 Console.WriteLine("3) Some other thing");
                 Console.WriteLine("4) Dunno LOL");
+                Console.WriteLine("5)Exit");
             
             
                 switch (Convert.ToString(Console.ReadLine()))
@@ -50,15 +51,21 @@ namespace Distributeur_de_cotes
                         Choice1.Init(students);
 
                         break;
+                    case "5":
+                        Environment.Exit(0);
+                        break;
+                    case "4":
+                        Console.WriteLine("¯\\_(ツ)_/¯");
+                        break;
                     default:
                         Console.WriteLine("Chose a valid choice please >:(");
                         break;
+                    
 
 
                 }
             }
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
+            
 
         }
         public static List<Student> ListStudents()
