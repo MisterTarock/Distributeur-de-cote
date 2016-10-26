@@ -35,24 +35,27 @@ namespace Distributeur_de_cotes
             {
                 Console.Write("=");
             }
-            Console.WriteLine("What are you here for?");
-            Console.WriteLine("1) See Bulletin");
-            Console.WriteLine("2) Something");
-            Console.WriteLine("3) Some other thing");
-            Console.WriteLine("4) Dunno LOL");
-            string result = "";
-            switch (Convert.ToString(Console.ReadLine()))
+            while (true)
             {
-                case "1":
-                    result = "Available bulletins:"+ Environment.NewLine;
-                    foreach (Student student in students)
-                    {
-                        result += Convert.ToString(student.Lastname)+ Environment.NewLine;
-                    }
-                    Console.WriteLine(result);
-                    break;
+                Console.WriteLine("What are you here for?");
+                Console.WriteLine("1) See Bulletin");
+                Console.WriteLine("2) Something");
+                Console.WriteLine("3) Some other thing");
+                Console.WriteLine("4) Dunno LOL");
+            
+            
+                switch (Convert.ToString(Console.ReadLine()))
+                {
+                    case "1":
+                        Choice1.Init(students);
+
+                        break;
+                    default:
+                        Console.WriteLine("Chose a valid choice please >:(");
+                        break;
 
 
+                }
             }
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
