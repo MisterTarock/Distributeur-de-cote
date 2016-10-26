@@ -122,7 +122,6 @@ namespace Distributeur_de_cotes
 
                 catch (FormatException)
                 {
-                    
                     grade = new Appreciation(activities.Find(a => a.Code == elems[1]), elems[2]);
                 }
 
