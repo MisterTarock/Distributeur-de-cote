@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using System.IO; //To allow us to read in the file.csv
 
 namespace Distributeur_de_cotes
 {
@@ -11,7 +11,7 @@ namespace Distributeur_de_cotes
     {
         static void Main(string[] args)
         {
-            List<Student> students = ListStudents();
+            List<Student> students = ListStudents();  //To init the list with the function below
             List<Teacher> teachers = ListTeachers();
             List<Activity> activities = ListActivity(teachers);
 
@@ -19,14 +19,15 @@ namespace Distributeur_de_cotes
 
             foreach (Student student in students)
             {
-                File.WriteAllText("../../Bulletin-" + student.Lastname + "-" + student.Firstname + ".txt", student.Bulletin()+"/n /n");
-                //Console.Write(student.Bulletin());
-                //Console.WriteLine(student.Average());
-                //Console.WriteLine("\n \n");
+                File.WriteAllText("../../../Bulletins/Bulletin-" + student.Lastname + "-" + student.Firstname + ".txt", student.Bulletin()+"/n /n");
+               //To create the bulletin in the folder Bulletins
+               //The ../ allow us to go one folder ahaed form the the debug file
 
             }
-            double width= Console.WindowWidth;
-            for ( int i = 0; i < ((width/2)-14); i++)
+
+            double width= Console.WindowWidth; //To define the width of the window
+
+            for ( int i = 0; i < ((width/2)-14); i++) //To make a beautiful title
             {
                 Console.Write("=");
             }
@@ -35,7 +36,8 @@ namespace Distributeur_de_cotes
             {
                 Console.Write("=");
             }
-            while (true)
+
+            while (true) //To compose our menu
             {
                 Console.WriteLine("What are you here for?");
                 Console.WriteLine("1) See Bulletin");
@@ -45,18 +47,24 @@ namespace Distributeur_de_cotes
                 Console.WriteLine("5)Exit");
             
             
-                switch (Convert.ToString(Console.ReadLine()))
+                switch (Convert.ToString(Console.ReadLine()))  //To make the action of the 4 different possibilities or the default result
                 {
                     case "1":
                         Choice1.Init(students);
 
                         break;
+<<<<<<< HEAD
                     case "5":
                         Environment.Exit(0);
                         break;
                     case "4":
                         Console.WriteLine("¯\\_(ツ)_/¯");
                         break;
+=======
+
+
+
+>>>>>>> 1b13acc630db845d07b8314c1d9cb221faa6518c
                     default:
                         Console.WriteLine("Chose a valid choice please >:(");
                         break;
@@ -65,16 +73,20 @@ namespace Distributeur_de_cotes
 
                 }
             }
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 1b13acc630db845d07b8314c1d9cb221faa6518c
 
         }
         public static List<Student> ListStudents()
         {
-            string[] studs = System.IO.File.ReadAllLines("../../students.csv");
-            List<Student> students = new List<Student>();
+            string[] studs = System.IO.File.ReadAllLines("../../../Database/students.csv"); //To go in the students file and read his content
+            List<Student> students = new List<Student>(); //To set the info from the student in a list that we can go through with
             foreach (string line in studs)
             {
-                List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
+                List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();  //To cut the info with the ','
                 students.Add(new Student(elems[0], elems[1]));
             }
             return students;
@@ -82,18 +94,19 @@ namespace Distributeur_de_cotes
         
         public static List<Teacher> ListTeachers()
         {
-            string[] teachs = System.IO.File.ReadAllLines("../../Teachers.csv");
+            string[] teachs = System.IO.File.ReadAllLines("../../../Database/teachers.csv");
             List<Teacher> teachers = new List<Teacher>();
             foreach(string line in teachs)
             {
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
-                teachers.Add(new Teacher(elems[0], elems[1], Int32.Parse(elems[2])));
+                teachers.Add(new Teacher(elems[0], elems[1], Int32.Parse(elems[2]))); //the salary of the teacher is a int32
             }
             return teachers;
         }
+
         public static List<Activity> ListActivity(List<Teacher> teachers)
         {
-            string[] actis = System.IO.File.ReadAllLines("../../Activities.csv");
+            string[] actis = System.IO.File.ReadAllLines("../../../DataBase/activities.csv");
             List<Activity> activities = new List<Activity>();
             
             foreach(string line in actis)
@@ -103,29 +116,27 @@ namespace Distributeur_de_cotes
             }
             return activities;
         }
+
         public static void readGrades(List<Student> students, List<Activity> activities)
         {
-            string[] grds = System.IO.File.ReadAllLines("../../Cotes.csv");
+            string[] grds = System.IO.File.ReadAllLines("../../../Database/cotes.csv");
             
             foreach (string line in grds)
             {
                 
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
+
                 
                 Evaluation grade;
 
-                // Grades can be either given as an int or a string (N, C, B, ...)
-                // We first try to parse the grade from the file as a number, if that fails (raises an exception)
-                // we assume the grade is in the string fromat
+
                 try
                 {
-                    grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));
-                    
-                    
+                    grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));   
                 }
+
                 catch (FormatException)
                 {
-                    
                     grade = new Appreciation(activities.Find(a => a.Code == elems[1]), elems[2]);
                 }
 
