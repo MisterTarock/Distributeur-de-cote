@@ -30,7 +30,7 @@ namespace Distributeur_de_cotes
                 }
                 Console.Clear();
                 string result = Environment.NewLine + "For the " + query + " Activity there is:" + Environment.NewLine + Environment.NewLine;
-                string[] bulletins = System.IO.File.ReadAllLines("../../../Database/Cotes.csv");
+                string[] bulletins = System.IO.File.ReadAllLines("../../../Database/cotes.csv");
                 double sum = 0;
                 int i = 0;
                 try

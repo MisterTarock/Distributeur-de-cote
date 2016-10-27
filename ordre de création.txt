@@ -1,5 +1,0 @@
-creer la classe personne
-creer l'etudiant et le prof qui se base sur personne
-creer l'activité qui se base sur prof
-creer une eval qui se base activité et fait appel a student
-creer cote et appreciation

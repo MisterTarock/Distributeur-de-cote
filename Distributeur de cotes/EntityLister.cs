@@ -27,18 +27,18 @@ namespace Distributeur_de_cotes
                     case "1":
                         Console.Clear();
                         Console.WriteLine("Format: Firstname, Lastname, Salary");
-                        Console.Write(List("../../../Database/Teachers.csv"));
+                        Console.Write(List("../../../Database/teachers.csv"));
                         break;
 
                     case "2":
                         Console.Clear();
                         Console.WriteLine("Format: Firstname, Lastname");
-                        Console.Write(List("../../../Database/Students.csv"));
+                        Console.Write(List("../../../Database/students.csv"));
                         break;
                     case "3":
                         Console.Clear();
                         Console.WriteLine("Format: Name, Code, Teacher, ECTS");
-                        Console.Write(List("../../../Database/Activities.csv"));
+                        Console.Write(List("../../../Database/activities.csv"));
                         break;
                     case "4":
                         state = false;
