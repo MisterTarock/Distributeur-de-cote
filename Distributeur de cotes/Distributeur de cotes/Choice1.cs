@@ -21,7 +21,11 @@ namespace Distributeur_de_cotes
                     result += student.Lastname + Environment.NewLine;
                 }
                 result += Environment.NewLine;
+<<<<<<< HEAD
+                
+=======
                
+>>>>>>> c0f43824ec535ae43802fd37fc1865e5cbcdb04d
                 result += "Wich one do you want to see? (or type exit to go back to the main menu)";
                 Console.Write(result);
                 
