@@ -1,1 +1,6 @@
-D:\Documents & Co\Documents\Visual Studio 2015\Projects\Labo2\Distributeur-de-cote\Distributeur de cotes\.vs
+.vs
+*.exe
+*/bin/*
+*/obj/*
+*/Properties/*
+App.config
