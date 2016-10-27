@@ -9,16 +9,16 @@ namespace Distributeur_de_cotes
 {
     class Choice2:Program
     {
-        public static void Init()
+        public static void Init() //Void indicates that the methode Init() doesn't return any value
         {
             Console.Clear();
 
             bool state = true;  //To define a state used by the loop to allow our programm to run as long as we don't write 'exit'           
             while (state == true)
             {
-                List<Student> students = ListStudents();
+                List<Student> students = ListStudents();  
                 List<Teacher> teachers = ListTeachers();
-                List<Activity> activities = ListActivity(teachers);
+                List<Activity> activities = ListActivity(teachers); //To init the list with the function below
 
                 Console.WriteLine(ListOfAvailableActivities(activities));
                 string query = Console.ReadLine();

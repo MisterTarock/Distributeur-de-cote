@@ -13,7 +13,7 @@ namespace Distributeur_de_cotes
         public static void Init()
         {
             Console.Clear();
-            bool state = true;
+            bool state = true;    //To define a state used by the loop to allow our programm to run as long as we don't write 'exit'
             while (state == true)
             {
                 Console.WriteLine("You want a list of wich entity?");

@@ -1,0 +1,19 @@
+Choice 1 Line31: expliquer found fin verifier ce que j'ai mis et corriger
+	Line 38: expliquer environment
+
+choice 2 Line 19, 20 pourquoi elle sont là? on les utilise pas plus loin si?
+
+
+Choice 3 Line51, Line 52 on devrait pas faire average =sum/i? et du coup Tostring(average)?
+
+Entity Line 61 explain the read all lines (path) tu specifies pas de fichier precisement?
+
+
+TO DO Tomorrow:
+
+faire UML Class
+rajouter UML Activity avec les dernieres fonctions
+rajouter explication des UML (short)
+faire le rapport + mode d'emploi (short, voir readme) 
+
+Remettre le rapport en pdf + lien du github

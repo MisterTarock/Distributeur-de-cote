@@ -44,7 +44,7 @@ namespace Distributeur_de_cotes
 
                     else if (query == "exit")
                     {                     
-                        state = false;
+                        state = false; //we go out from the loop
                         found = true;
                         break;
                     }
