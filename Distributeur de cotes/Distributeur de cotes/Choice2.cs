@@ -12,7 +12,7 @@ namespace Distributeur_de_cotes
         public static void Init() {
             Console.Clear();
             bool state = true;
-            bool found = false;
+            
             while (state == true)
             {
                 List<Student> students = ListStudents();
