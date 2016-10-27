@@ -54,6 +54,7 @@ namespace Distributeur_de_cotes
 
                         break;
                     case "2":
+                        Choice2.Init();
                         break;
 
                     case "5":
@@ -116,12 +117,14 @@ namespace Distributeur_de_cotes
         {
             string[] grds = System.IO.File.ReadAllLines("../../../Database/cotes.csv");
             
+            
             foreach (string line in grds)
             {
                 
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
 
                 
+               
                 Evaluation grade;
 
 
@@ -145,10 +148,12 @@ namespace Distributeur_de_cotes
                     Console.Write(elems[0]);
                     Console.WriteLine(": Student not registered");
                 }
+            
                 
 
                 
             }
+            
         }
     }
 }

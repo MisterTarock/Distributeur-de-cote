@@ -21,7 +21,7 @@ namespace Distributeur_de_cotes
                     result += student.Lastname + Environment.NewLine;
                 }
                 result += Environment.NewLine;
-                Console.WriteLine(students.Count);
+                
                 result += "Wich one do you want to see? (or type exit to go back to the main menu)";
                 Console.Write(result);
                 
@@ -29,7 +29,7 @@ namespace Distributeur_de_cotes
                 bool found = false;
                 foreach (Student person in students)
                 {
-                    Console.WriteLine(person);
+                    
                     if (person.Lastname == query)
                     {
                         result = person.Bulletin();

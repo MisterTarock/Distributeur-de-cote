@@ -1,0 +1,28 @@
+Comment remove des fichiers deja poster sur github et les ignorer ensuite via gitignore
+
+faire beaucoup de git status!!! ^^
+
+git rm --cached            //pour arreter de tracker le fichier localement
+
+git rm --cached -r '/d/Documents & Co/Documents/Visual Studio 2015/Projects/Labo2/Distributeur-de-cote/Distributeur de cotes/Distributeur de cotes/App.config'       -r 	//pour pouvoir prendre tout un dossier (glisser le dossier 					//dans git bash pour generer le chemin
+
+faire un status pour verifier qu'on ne les suit plus.
+
+git add et git commit pour ensuite push le tout et les fichier du gitignore seront supprimé ;)
+
+
+Que écrire dans le gitignore??
+
+.vs
+*.exe     //pour ignorer tout les fichier exe
+*/bin/*   //pour ignorer tout les fichier du bin donc le chemin n'est pas spécifié non plus
+*/obj/*
+*/Properties/*
+App.config    //pour ignorer précisement le fichier
+
+
+
+
+
+
+
