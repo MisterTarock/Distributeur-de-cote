@@ -53,18 +53,14 @@ namespace Distributeur_de_cotes
                         Choice1.Init(students);
 
                         break;
-<<<<<<< HEAD
+
                     case "5":
                         Environment.Exit(0);
                         break;
                     case "4":
                         Console.WriteLine("¯\\_(ツ)_/¯");
                         break;
-=======
 
-
-
->>>>>>> 1b13acc630db845d07b8314c1d9cb221faa6518c
                     default:
                         Console.WriteLine("Chose a valid choice please >:(");
                         break;
@@ -73,11 +69,7 @@ namespace Distributeur_de_cotes
 
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 1b13acc630db845d07b8314c1d9cb221faa6518c
 
         }
         public static List<Student> ListStudents()
