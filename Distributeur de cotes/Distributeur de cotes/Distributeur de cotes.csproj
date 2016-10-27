@@ -49,6 +49,7 @@
     <Compile Include="Choice2.cs" />
     <Compile Include="Choice3.cs" />
     <Compile Include="Cote.cs" />
+    <Compile Include="EntityLister.cs" />
     <Compile Include="Evaluation.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />

@@ -9,7 +9,7 @@ namespace Distributeur_de_cotes
 {
     class Choice3:Choice2
     {
-        public static void Init()
+        public static new void Init()
         {
             Console.Clear();
             bool state = true;
@@ -31,7 +31,7 @@ namespace Distributeur_de_cotes
                 Console.Clear();
                 string result = Environment.NewLine + "For the " + query + " Activity there is:" + Environment.NewLine + Environment.NewLine;
                 string[] bulletins = System.IO.File.ReadAllLines("../../../Database/Cotes.csv");
-                double sum=0;
+                double sum = 0;
                 int i = 0;
                 try
                 {
@@ -49,7 +49,7 @@ namespace Distributeur_de_cotes
 
                     }
                     sum = sum / i;
-                    result += "The average of this activity is: " + Convert.ToString(sum)+Environment.NewLine + Environment.NewLine;
+                    result += "The average of this activity is: " + Convert.ToString(sum) + Environment.NewLine + Environment.NewLine;
                     Console.WriteLine(result);
                     Console.WriteLine("Press any key to see another activity");
 

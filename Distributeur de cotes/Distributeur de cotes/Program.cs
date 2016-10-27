@@ -43,8 +43,9 @@ namespace Distributeur_de_cotes
                 Console.WriteLine("1) See Bulletin");
                 Console.WriteLine("2) See who attends an activity");
                 Console.WriteLine("3) See the activity average");
-                Console.WriteLine("4) Dunno LOL");
+                Console.WriteLine("4) List different entities");
                 Console.WriteLine("5) Exit");
+                Console.WriteLine("6) Dunno LOL");
             
             
                 switch (Convert.ToString(Console.ReadLine()))  //To make the action of the 4 different possibilities or the default result
@@ -60,12 +61,15 @@ namespace Distributeur_de_cotes
                     case "3":
                         Choice3.Init();
                         break;
+                    case "4":
+                        EntityLister.Init();
+                        break;
 
 
                     case "5":
                         Environment.Exit(0);
                         break;
-                    case "4":
+                    case "6":
                         Console.Clear();
                         Console.WriteLine("¯\\_(ツ)_/¯");
                         Console.WriteLine();
