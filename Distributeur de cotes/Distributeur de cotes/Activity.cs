@@ -8,11 +8,12 @@ using Distributeur_de_cotes;
 namespace Distributeur_de_cotes
 {
    public class Activity //reated to teacher with a composition so we replace 
-                //the type 'int, string...' by the name from the related class
+                         //the type 'int, string...' by the name from the related class
     {
         //to create my variable (so in minuscule)
         private int ects;
         private string name, code;
+
         //Teacher became my type and is with a variable teacher 
         private Teacher teacher;
 

@@ -13,7 +13,6 @@ namespace Distributeur_de_cotes
         //to create my variable (so in minuscule)
         private string appreciation;
 
-
         //to create my properties
         public Appreciation(Activity activity, string appreciation) : base(activity)
         {
@@ -21,7 +20,7 @@ namespace Distributeur_de_cotes
         }
 
         //Note are the properties of the variable appreciation
-        //We override to write in Note who were abstract in the class Evaluation
+        //We override to write in the methode Note() who were abstract in the class Evaluation
         public override int Note()
         {
             switch (appreciation)

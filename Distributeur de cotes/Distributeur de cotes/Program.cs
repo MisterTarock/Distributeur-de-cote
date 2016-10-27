@@ -22,7 +22,6 @@ namespace Distributeur_de_cotes
                 File.WriteAllText("../../../Bulletins/Bulletin-" + student.Lastname + "-" + student.Firstname + ".txt", student.Bulletin()+"/n /n");
                //To create the bulletin in the folder Bulletins
                //The ../ allow us to go one folder ahaed form the the debug file
-
             }
             while (true) //To compose our menu
             {
@@ -70,8 +69,7 @@ namespace Distributeur_de_cotes
                     default:
                         Console.WriteLine("Chose a valid choice please >:(");
                         break;
-                    
-
+                                           
 
                 }
             }
@@ -123,12 +121,9 @@ namespace Distributeur_de_cotes
             foreach (string line in grds)
             {
                 
-                List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
-
-                
+                List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();               
                
                 Evaluation grade;
-
 
                 try
                 {
@@ -150,9 +145,7 @@ namespace Distributeur_de_cotes
                     Console.Write(elems[0]);
                     Console.WriteLine(": Student not registered");
                 }
-            
-                
-
+                           
                 
             }
             

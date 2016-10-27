@@ -9,30 +9,35 @@ namespace Distributeur_de_cotes
 {
     class Choice2:Program
     {
-        public static void Init() {
+        public static void Init()
+        {
             Console.Clear();
-            bool state = true;
-            
+
+            bool state = true;  //To define a state used by the loop to allow our programm to run as long as we don't write 'exit'           
             while (state == true)
             {
                 List<Student> students = ListStudents();
-
                 List<Teacher> teachers = ListTeachers();
                 List<Activity> activities = ListActivity(teachers);
+
                 Console.WriteLine(ListOfAvailableActivities(activities));
                 string query = Console.ReadLine();
+
                 if (query == "exit")
                 {
                     state = false;
                     Console.Clear();
                     break;
                 }
+
                 Console.Clear();
                 string result =Environment.NewLine+ "For the " + query + " Activity there is:" + Environment.NewLine+ Environment.NewLine;
                 string[] bulletins = System.IO.File.ReadAllLines("../../../Database/Cotes.csv");
+
                 try
                 {
                     string querycode = activities.Find(a => a.Name == query).Code;
+
                     foreach (string line in bulletins)
                     {
                         List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
@@ -40,17 +45,17 @@ namespace Distributeur_de_cotes
                         if (elems[1] == querycode)
                         {
                             result += elems[0] + Environment.NewLine;
-
                         }
 
-
                     }
+
                     Console.WriteLine(result);
                     Console.WriteLine("Press any key to see another activity");
                     
                     Console.ReadKey();
                     Console.Clear();
                 }
+
                 catch
                 {
                     Console.Clear();
@@ -61,12 +66,11 @@ namespace Distributeur_de_cotes
                     Console.Clear();
                 }
                 
-
             }
         }
+
         public static string ListOfAvailableActivities(List<Activity> activities)
-        {
-            
+        {          
             string result = "";
             result+="Available activities:"+Environment.NewLine + Environment.NewLine;
             
@@ -74,13 +78,12 @@ namespace Distributeur_de_cotes
             {
                 result += activity.Name+ Environment.NewLine;
             }
+
             result += Environment.NewLine;
             result +="For which activity do you need information? Or type exit" ;
             return result;
-
-
-        }
         }
     }
+}
     
 
