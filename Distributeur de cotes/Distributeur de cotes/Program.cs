@@ -42,7 +42,7 @@ namespace Distributeur_de_cotes
                 Console.WriteLine("What are you here for?");
                 Console.WriteLine("1) See Bulletin");
                 Console.WriteLine("2) See who attends an activity");
-                Console.WriteLine("3) Some other thing");
+                Console.WriteLine("3) See the activity average");
                 Console.WriteLine("4) Dunno LOL");
                 Console.WriteLine("5) Exit");
             
@@ -57,13 +57,22 @@ namespace Distributeur_de_cotes
                     case "2":
                         Choice2.Init();
                         break;
+                    case "3":
+                        Choice3.Init();
+                        break;
 
 
                     case "5":
                         Environment.Exit(0);
                         break;
                     case "4":
+                        Console.Clear();
                         Console.WriteLine("¯\\_(ツ)_/¯");
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.WriteLine("Press any key when you know");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
 
