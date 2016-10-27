@@ -53,9 +53,11 @@ namespace Distributeur_de_cotes
                         Choice1.Init(students);
 
                         break;
+
                     case "2":
                         Choice2.Init();
                         break;
+
 
                     case "5":
                         Environment.Exit(0);
