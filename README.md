@@ -14,10 +14,10 @@ When you'll launch our program, it will display some option like this:
 #Navigation in the Menu
 
 ##First Choice
-~~Attention please! If you write anything other than the attended numbers it will show an exception and reload the propositions.~~
+:collision: Attention please! If you write anything other than the attended numbers it will show an exception and reload the propositions.
 
 if you chose the 1) you'll be proposed to choose a student.
-~~You need to write his name correctly and entirely to let the program work ;)~~
+:collision: You need to write his name correctly and entirely to let the program work ;)
 
 If the student is not recognized, the program will say that there is "No such person"
 
@@ -49,8 +49,8 @@ and it will display the different contents of this *.csv file*
 
 
 #Contributor
-- Puissant Baeyens Victor, 12098, @MisterTarock
-- De Keyzer  Paolo, 13201, @KB1395
+- Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
+- De Keyzer  Paolo, 13201, [KB1395](https://github.com/KB1395)
 
 
 #References
