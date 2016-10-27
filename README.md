@@ -16,7 +16,7 @@ When you'll launch our program, it will display some option like this:
 ##First Choice
 :collision: Attention please! If you write anything other than the attended numbers it will show an exception and reload the propositions.
 
-if you chose the 1) you'll be proposed to choose a student.
+if you chose the *1)* you'll be proposed to choose a student.
 :collision: You need to write his name correctly and entirely to let the program work ;)
 
 If the student is not recognized, the program will say that there is "No such person"
@@ -30,16 +30,16 @@ After that you can consult another student or write "exit" to return at the main
 
 
 ##Second Choice
-if you chose the 2) you'll be proposed to choose a class.
+if you chose the *2)* you'll be proposed to choose a class.
 Write the name of class chosen and it will display the students who are attending this class.
 
 ##Third Choice
-if you chose the 3) you'll be proposed to choose a class.
+if you chose the *3)* you'll be proposed to choose a class.
 Write the name of class chosen and it will display the average of all the students
 who are attending this class.
 
 ##Forth Choice
-if you chose the 4) you'll be proposed to chose again between
+if you chose the *4)* you'll be proposed to chose again between
 - 1)Teachers
 - 2)Students
 - 3)Activities
