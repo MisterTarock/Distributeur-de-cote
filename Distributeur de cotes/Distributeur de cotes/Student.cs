@@ -9,7 +9,7 @@ namespace Distributeur_de_cotes
    public class Student:Person
     {
         //To create my variable
-        private List<Evaluation>  cours; //with all the cursus
+        private List<Evaluation>  cours; //To make a list with all the evaluation from each activity
 
         //My constructor + base
         //base call the constructor from person
@@ -18,33 +18,32 @@ namespace Distributeur_de_cotes
             cours = new List<Evaluation>();
         }
 
-        //The different method
+        
 
-        //to Add the Eval
+        //The method () to Add the Eval
         public void Add(Evaluation eval)
         {
-            
-            cours.Add(eval);
-            
+            cours.Add(eval);            
         }
 
-        //to make the average of all the eval
+        //The method () to make the average of all the eval
         public string Average()
         {
-            var sum = 0;
+            var sum = 0;  //to init the sum
             string result = "";
             
-            foreach (var n in this.cours)
+            foreach (var n in this.cours)  //to set the loop + increment that will read each eval 
 
                 sum += n.Note();
-            try { 
+            try
+            {                               //To give the average
                 sum = sum / this.cours.Count;
                 result = "The student average is:";
                 result +=Convert.ToString(sum);
                 return result;
                 
             }
-            catch(DivideByZeroException)
+            catch(DivideByZeroException)  //To make the exception where there are no eval
             {
                 Convert.ToString(sum);
                 result="Can't do student average: No evalutaions yet";
@@ -54,19 +53,18 @@ namespace Distributeur_de_cotes
         }
 
        
-        public string Bulletin()
+        public string Bulletin()  //To write the Bulletin as a dictionnary
         { 
             Dictionary<Activity, Tuple<int, int>> cotesforActivity = new Dictionary<Activity, Tuple<int, int>>();
             
-            foreach (var point in cours){
-                
-
+            foreach (var point in cours)
+            {               
                 try
                 {
-                    
                     Tuple<int, int> t = cotesforActivity[point.Activity];
                     cotesforActivity[point.Activity] = new Tuple<int, int>(t.Item1 + point.Note(), t.Item2 + 1);
                 }
+
                 catch (KeyNotFoundException)
                 {
                     cotesforActivity.Add(point.Activity, new Tuple<int, int>(point.Note(), 1));
@@ -78,13 +76,11 @@ namespace Distributeur_de_cotes
             
             
             foreach (KeyValuePair<Activity, Tuple<int, int>> entry in cotesforActivity)
-            {
-                
+            {              
                 bulletin += entry.Key.Code + " " + entry.Key.Name + " " + entry.Key.ECTS + " " + entry.Value.Item1 / entry.Value.Item2 + "\n";
             }
 
             
-
             return bulletin;
         }
     }

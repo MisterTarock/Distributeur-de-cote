@@ -20,9 +20,9 @@ namespace Distributeur_de_cotes
         {
             return cote;
         }
-        public void setNote(int nt)
-        {
-            
+
+        public void setNote(int nt)  //In case we have to modify the note of the student
+        {          
             cote = nt;
         }
         
