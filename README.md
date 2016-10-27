@@ -1,3 +1,5 @@
+#Distributeur de cotes
+
 This is our project in **C#** to understand the concept of **object programming**.
 Our little program can access to data about some students, courses, etc.
 
@@ -12,8 +14,10 @@ When you'll launch our program, it will display some option like this:
 #Navigation in the Menu
 
 ##First Choice
+~~Attention please! If you write anything other than the attended numbers it will show an exception and reload the propositions.~~
+
 if you chose the 1) you'll be proposed to choose a student.
-Attention please! You need to write his name correctly and entirely to let the program work ;)
+~~You need to write his name correctly and entirely to let the program work ;)~~
 
 If the student is not recognized, the program will say that there is "No such person"
 
@@ -42,6 +46,11 @@ if you chose the 4) you'll be proposed to chose again between
 - 4)Exit
 
 and it will display the different contents of this *.csv file*
+
+
+#Contributor
+- Puissant Baeyens Victor, 12098, @MisterTarock
+- De Keyzer  Paolo, 13201, @KB1395
 
 
 #References
