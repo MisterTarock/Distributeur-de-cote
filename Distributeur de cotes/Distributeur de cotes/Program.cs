@@ -24,27 +24,27 @@ namespace Distributeur_de_cotes
                //The ../ allow us to go one folder ahaed form the the debug file
 
             }
-
-            double width= Console.WindowWidth; //To define the width of the window
-
-            for ( int i = 0; i < ((width/2)-14); i++) //To make a beautiful title
-            {
-                Console.Write("=");
-            }
-            Console.Write("Bienvenue dans evaluator 2.0 ");
-            for (int i = 0; i < ((width / 2) - 15); i++)
-            {
-                Console.Write("=");
-            }
-
             while (true) //To compose our menu
             {
+
+                double width= Console.WindowWidth; //To define the width of the window
+
+                for ( int i = 0; i < ((width/2)-14); i++) //To make a beautiful title
+                {
+                    Console.Write("=");
+                }
+                Console.Write("Bienvenue dans evaluator 2.0 ");
+                for (int i = 0; i < ((width / 2) - 15); i++)
+                {
+                    Console.Write("=");
+                }
+                          
                 Console.WriteLine("What are you here for?");
                 Console.WriteLine("1) See Bulletin");
-                Console.WriteLine("2) Something");
+                Console.WriteLine("2) See who attends an activity");
                 Console.WriteLine("3) Some other thing");
                 Console.WriteLine("4) Dunno LOL");
-                Console.WriteLine("5)Exit");
+                Console.WriteLine("5) Exit");
             
             
                 switch (Convert.ToString(Console.ReadLine()))  //To make the action of the 4 different possibilities or the default result
@@ -53,18 +53,17 @@ namespace Distributeur_de_cotes
                         Choice1.Init(students);
 
                         break;
-<<<<<<< HEAD
+                    case "2":
+                        break;
+
                     case "5":
                         Environment.Exit(0);
                         break;
                     case "4":
                         Console.WriteLine("¯\\_(ツ)_/¯");
                         break;
-=======
 
 
-
->>>>>>> 1b13acc630db845d07b8314c1d9cb221faa6518c
                     default:
                         Console.WriteLine("Chose a valid choice please >:(");
                         break;
@@ -73,11 +72,7 @@ namespace Distributeur_de_cotes
 
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 1b13acc630db845d07b8314c1d9cb221faa6518c
 
         }
         public static List<Student> ListStudents()

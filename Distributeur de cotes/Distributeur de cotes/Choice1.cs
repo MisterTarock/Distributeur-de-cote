@@ -21,17 +21,21 @@ namespace Distributeur_de_cotes
                     result += student.Lastname + Environment.NewLine;
                 }
                 result += Environment.NewLine;
+                Console.WriteLine(students.Count);
                 result += "Wich one do you want to see? (or type exit to go back to the main menu)";
                 Console.Write(result);
-                string query = Console.ReadLine();
                 
+                string query = Console.ReadLine();
+                bool found = false;
                 foreach (Student person in students)
                 {
+                    Console.WriteLine(person);
                     if (person.Lastname == query)
                     {
                         result = person.Bulletin();
                         result += person.Average() + Environment.NewLine + Environment.NewLine;
                         Console.WriteLine(result);
+                        found = true;
                         Console.WriteLine("Press any key to see another bulletin");
                         Console.ReadKey();
                         
@@ -40,22 +44,27 @@ namespace Distributeur_de_cotes
                     }
                     else if (query == "exit")
                     {
+
                         
                         state = false;
+                        found = true;
                         break;
                     }
 
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("No such person");
-                        Console.WriteLine("Press any key to see another bulletin");
-                        Console.ReadKey();
-                        break;
-                    }
-                    break;
+
+
                 }
-                
+                if (found == false)
+                {
+                    Console.Clear();
+                    Console.WriteLine("No such person");
+                    Console.WriteLine("Press any key to return to the main menu");
+                    Console.ReadKey();
+                    break;
+
+                }
+
+
                 Console.Clear();
             }
 
