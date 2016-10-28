@@ -15,14 +15,15 @@ namespace Distributeur_de_cotes
             bool state = true;  //To define a state used by the loop to allow our programm to run as long as we don't write 'exit'
             while (state==true)
             {
-                string result = "Available bulletins:" + Environment.NewLine;  //to show the different student 
+                string result = "Available bulletins:" + Environment.NewLine;  
+                //to show the various students
                 foreach (Student student in students)
                 {
                     result += student.Lastname + Environment.NewLine;
                 }
 
                 result += Environment.NewLine;
-
+                
                 result += "Wich one do you want to see? (or type exit to go back to the main menu)";
                 Console.Write(result);
                 
@@ -30,15 +31,18 @@ namespace Distributeur_de_cotes
                 //Here we use a bool so when have been through the whole bulletin, if the student is not 
                 //found, An error pops out saying "No student found" (see line 56)
                 
-                bool found = false;  
+                bool found = false;//when we went through all students, if found=false, throws an exeption  
                 foreach (Student person in students)
                 {
                                         
-                    if (person.Lastname == query)  //to give the result from the personn asked
+                    //see if the query matches any od the students
+                    if (person.Lastname == query) 
                     {
+                        //print the bulletin and the average
                         result = person.Bulletin();
                         result += person.Average() + Environment.NewLine + Environment.NewLine; //Environment.NewLine does a linebreak
                         Console.WriteLine(result);
+                        //found=true means we found at least a match and throws no exeption
                         found = true;
                         Console.WriteLine("Press any key to see another bulletin");
                         Console.ReadKey();                      
@@ -52,7 +56,7 @@ namespace Distributeur_de_cotes
                     }
 
                 }
-
+                //exeption if typo error or no entry
                 if (found == false)
                 {
                     Console.Clear();

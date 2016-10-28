@@ -7,17 +7,16 @@ using Distributeur_de_cotes;
 
 namespace Distributeur_de_cotes
 {
-   public class Activity //reated to teacher with a composition so we replace 
-                         //the type 'int, string...' by the name from the related class
+   public class Activity 
     {
         //to create my variable (so in minuscule)
         private int ects;
         private string name, code;
 
-        //Teacher became my type and is with a variable teacher 
+        //the variable teacher is of type Teacher
         private Teacher teacher;
 
-        //to create the properties who are constructor and use the variables 
+        //to create the various accessors 
         //with 'get' and 'set' to write in the variable (the properties in MAJ)
         public int ECTS
         {
