@@ -64,8 +64,7 @@ namespace Distributeur_de_cotes
             //we concatenate every entity and return the whole string
             foreach (string line in lines)
             {
-                result += line+Environment.NewLine;
-                
+                result += line+Environment.NewLine;               
             }
             return result;
         }

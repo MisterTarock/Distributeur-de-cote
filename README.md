@@ -47,6 +47,14 @@ if you chose the *4)* you'll be proposed to chose again between
 
 and it will display the different contents of the correspondant *.csv file*
 
+##Fifth Choice
+if you chose the *6)* you receive a perfect ASCII guy who doesn't know a thing!
+
+
+##Sixth Choice
+if you chose the *5)* you'll exit the program.
+
+
 
 #Contributor
 - Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
