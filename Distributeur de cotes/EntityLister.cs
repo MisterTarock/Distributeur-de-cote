@@ -63,8 +63,7 @@ namespace Distributeur_de_cotes
             string[] lines = System.IO.File.ReadAllLines(path);
             foreach (string line in lines)
             {
-                result += line+Environment.NewLine;
-                
+                result += line+Environment.NewLine;               
             }
             return result;
         }
