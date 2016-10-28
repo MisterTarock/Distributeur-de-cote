@@ -61,6 +61,7 @@ namespace Distributeur_de_cotes
             //Here we use the "path" variable so we can use this function for every entity whitout wrtiting
             //everything again
             string[] lines = System.IO.File.ReadAllLines(path);
+            //we concatenate every entity and return the whole string
             foreach (string line in lines)
             {
                 result += line+Environment.NewLine;               

@@ -8,7 +8,7 @@ namespace Distributeur_de_cotes
 {
    public abstract class Evaluation  
 
-    // For the relation of Agregation we had to call evalution in the list "cours"
+    // For the relation of Agregation we had to call evaluation in the list "cours"
 
     //For the Heritage we write it in the two class "Cote" and Appreciation
 
@@ -18,7 +18,7 @@ namespace Distributeur_de_cotes
         private Activity activity;
 
 
-        //to create the properties who are constructor and use the variables 
+        //to create the accessor that uses the variables 
         //with 'get' and 'set' to write in the variable (the properties in MAJ)
         public Activity Activity
         {
@@ -34,8 +34,8 @@ namespace Distributeur_de_cotes
 
         //To make the Note
         public abstract int Note(); 
-        // abstract so we don't need the {}
-        // we only create the methode Note but with nothing in it and the class Appreciation will override in it
+        // abstract so we don't need to declare the body
+        // we only create the method Note but with nothing in it and the class Appreciation will override in it
 
     }
 }

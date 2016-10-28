@@ -25,11 +25,13 @@ namespace Distributeur_de_cotes
 
                 if (query == "exit")
                 {
+                    //breaks the loop
                     state = false;
                     Console.Clear();
                     break;
                 }
 
+                //displays the list of available students
                 Console.Clear();
                 string result =Environment.NewLine+ "For the " + query + " Activity there is:" + Environment.NewLine+ Environment.NewLine;
                 string[] bulletins = System.IO.File.ReadAllLines("../../../Database/cotes.csv");
@@ -37,13 +39,13 @@ namespace Distributeur_de_cotes
                 try
                 {
                     string querycode = activities.Find(a => a.Name == query).Code;
-
+                    //goes trough every line of bulletin and splits every line in a string array
                     foreach (string line in bulletins)
                     {
                         List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();
-
                         if (elems[1] == querycode)
                         {
+                            //concatenation of every match
                             result += elems[0] + Environment.NewLine;
                         }
 
@@ -72,6 +74,7 @@ namespace Distributeur_de_cotes
         public static string ListOfAvailableActivities(List<Activity> activities)
         {          
             string result = "";
+            //displays a list of available activities and waits for an input
             result+="Available activities:"+Environment.NewLine + Environment.NewLine;
             
             foreach (Activity activity in activities)

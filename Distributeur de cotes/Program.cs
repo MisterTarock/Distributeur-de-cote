@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net;
 using System.Threading.Tasks;
 using System.IO; //To allow us to read in the file.csv
 
@@ -16,6 +17,7 @@ namespace Distributeur_de_cotes
             List<Activity> activities = ListActivity(teachers);
 
             readGrades(students,activities);
+            
 
             foreach (Student student in students)
             {
@@ -92,6 +94,7 @@ namespace Distributeur_de_cotes
 
 
         }
+        //creates a list that includes all the students firstnames and lastnames reading the students.csv
         public static List<Student> ListStudents()
         {
             string[] studs = System.IO.File.ReadAllLines("../../../Database/students.csv"); //To go in the students file and read his content
@@ -103,7 +106,7 @@ namespace Distributeur_de_cotes
             }
             return students;
         }
-        
+        //same as the students but the teachers with the teaches parmams (Firstname, lastname, salary)
         public static List<Teacher> ListTeachers()
         {
             string[] teachs = System.IO.File.ReadAllLines("../../../Database/teachers.csv");
@@ -115,7 +118,7 @@ namespace Distributeur_de_cotes
             }
             return teachers;
         }
-
+        //same as the students but for the activities with the activities parmams (Name,Code, ...)
         public static List<Activity> ListActivity(List<Teacher> teachers)
         {
             string[] actis = System.IO.File.ReadAllLines("../../../DataBase/activities.csv");
@@ -128,7 +131,7 @@ namespace Distributeur_de_cotes
             }
             return activities;
         }
-
+        //same as before but for the grades
         public static void readGrades(List<Student> students, List<Activity> activities)
         {
             string[] grds = System.IO.File.ReadAllLines("../../../Database/cotes.csv");
@@ -140,13 +143,16 @@ namespace Distributeur_de_cotes
                 List<string> elems = line.Split(',').Select(elem => elem.Trim()).ToList<string>();               
                
                 Evaluation grade;
-
+                //the differece here is that the grade has an activity parameter so, we have to find the 
+                //Corresponding activity (using the lesson code)
                 try
                 {
                     grade = new Cote(Convert.ToInt32(elems[2]), activities.Find(a => a.Code == elems[1]));   
                 }
 
+                //if the grade is given through an appreciation
                 catch (FormatException)
+
                 {
                     grade = new Appreciation(activities.Find(a => a.Code == elems[1]), elems[2]);
                 }

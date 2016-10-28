@@ -9,7 +9,7 @@ namespace Distributeur_de_cotes
 {
    public class Teacher : Person
     {
-        //to create my variable (so in minuscule)
+        
         private int salary;
 
         //to create the properties who are constructor and use the variables 

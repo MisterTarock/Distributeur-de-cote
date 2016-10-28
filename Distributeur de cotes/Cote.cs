@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Distributeur_de_cotes
 {
     public class Cote : Evaluation
-    //For the Heritage we use "Evaluation" with his constructor with base
+    //We use can inherit the cosntructor of "evalutation" with ":base"
 
     {
-        //to create my variable (so in minuscule)
+        //to create my variable (so in lower case)
         
         private int cote;
 
@@ -25,7 +25,7 @@ namespace Distributeur_de_cotes
         {          
             cote = nt;
         }
-        
+        //Constructor of Cote
         public Cote(int cote, Activity Activity) : base(Activity)
         {
             this.cote = cote;
