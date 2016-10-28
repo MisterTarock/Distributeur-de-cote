@@ -140,7 +140,7 @@ namespace Distributeur_de_cotes
 
                 try
                 {
-                    grade = new Cote(Int32.Parse(elems[2]),activities.Find(a => a.Code == elems[1]));   
+                    grade = new Cote(Convert.ToInt32(elems[2]), activities.Find(a => a.Code == elems[1]));   
                 }
 
                 catch (FormatException)
