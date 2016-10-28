@@ -58,6 +58,8 @@ namespace Distributeur_de_cotes
         public static string List(string path)
         {
             string result = "";
+            //Here we use the "path" variable so we can use this function for every entity whitout wrtiting
+            //everything again
             string[] lines = System.IO.File.ReadAllLines(path);
             foreach (string line in lines)
             {

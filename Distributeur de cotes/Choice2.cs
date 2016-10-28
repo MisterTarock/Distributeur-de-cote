@@ -16,7 +16,7 @@ namespace Distributeur_de_cotes
             bool state = true;  //To define a state used by the loop to allow our programm to run as long as we don't write 'exit'           
             while (state == true)
             {
-                List<Student> students = ListStudents();  
+                
                 List<Teacher> teachers = ListTeachers();
                 List<Activity> activities = ListActivity(teachers); //To init the list with the function below
 
