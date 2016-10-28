@@ -47,9 +47,9 @@ namespace Distributeur_de_cotes
                             i += 1;
                         }
                     }
-
-                    sum = sum / i;  //To make the average of the student attending the class
-                    result += "The average of this activity is: " + Convert.ToString(sum) + Environment.NewLine + Environment.NewLine;  //To display the average of the class
+                    double average = 0;
+                    average = sum / i;  //To make the average of the student attending the class
+                    result += "The average of this activity is: " + Convert.ToString(average) + Environment.NewLine + Environment.NewLine;  //To display the average of the class
                     Console.WriteLine(result);
                     Console.WriteLine("Press any key to see another activity");
 

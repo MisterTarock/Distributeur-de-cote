@@ -27,7 +27,9 @@ namespace Distributeur_de_cotes
                 Console.Write(result);
                 
                 string query = Console.ReadLine(); //To read the answer that we gave at the console
-
+                //Here we use a bool so when have been through the whole bulletin, if the student is not 
+                //found, An error pops out saying "No student found" (see line 56)
+                
                 bool found = false;  
                 foreach (Student person in students)
                 {
@@ -35,7 +37,7 @@ namespace Distributeur_de_cotes
                     if (person.Lastname == query)  //to give the result from the personn asked
                     {
                         result = person.Bulletin();
-                        result += person.Average() + Environment.NewLine + Environment.NewLine;
+                        result += person.Average() + Environment.NewLine + Environment.NewLine; //Environment.NewLine does a linebreak
                         Console.WriteLine(result);
                         found = true;
                         Console.WriteLine("Press any key to see another bulletin");
